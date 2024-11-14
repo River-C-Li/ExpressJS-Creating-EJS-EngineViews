@@ -1,5 +1,6 @@
 # Node.js template
-
+author: River Li
+description: two templates using ejs engine view, 
 This is a Node.js project.
 
 Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
