@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#template-one#</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+   <header >
+    <nav id="mustmenu" style="color:rgb(252, 251, 251)">HERE IS KIA LOGO AND TOP MENU. THIS IS A CAR MODEL Gallery.</nav>
+  </header>
+  <nav id="order-menu">
+  
+      <div class="subnav" >
+        <a href="./kiahome.html">2025 Carnival
+        </a>
+      </div>
+      <div class="subnav"><a href="./kiahome.html">
+        Overview 
+      </a>
+      </div>
+      <div class="subnav"><a href="./kiahome.html">
+        Specs </a>
+
+      </div>
+      <div class="subnav"><a href="./index.html">
+        Gallery  </a>
+      </div>
+      <div class="subnav"><a href="./kiahome.html">
+        Features</a>
+      </div>
+      <div class="subnav"><a href="./kiahome.html">
+        Offers</a>
+      </div>
+      <div class="subnav"><a href="./kiahome.html">
+        Build</a>
+      </div>
+  </nav>
+   <main> 
+    
+      <h1>#title#</h1>
+      <div>#content#</div>
+    
+
+     <div class="form-container">
+        <form id="request">
+          <input name="username" type="text" placeholder="Full name" required
+            pattern="/^(?=.*[a-z]{2})(?!.*\W)(?!.* ).{4,}$/"
+            title="username must contain at least two unique characters and cannot contain any special characters or whitespace" />
+          <br /><br />
+
+          <input name="email" type="email" placeholder="Email" required pattern="/^(?!.*[example.com])(?!.*[A-Z])$/"
+            title="Email must not be from the domain example.com." />
+          </span><br /><br />
+
+          <input name="password" type="text" placeholder="Phone" required
+            pattern="/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.*[password]{A-Za-z})(?=.*\W)(?!.* ).{12,}$/" title="Passwords must be at least 12 characters long.
+    Passwords must have at least one uppercase and one lowercase letter.
+    must contain at least one number.
+    must contain at least one special character.
+    cannot contain the word `password` (uppercase, lowercase, or mixed).
+    cannot contain the username." />
+          <br /><br />
+
+          <input name="passwordCheck" type="text" placeholder="Address" required />
+          <br /><br />
+
+          <div class="flex-row">
+
+            <input type="submit" value="Submit Request" />
+
+            <div id="successMessage" style="display: none">
+              Form submitted successfully!
+            </div>
+          </div>
+        </form>
+      </div>
+
+     </main> 
+    </div>
+  </body>
+</html>
