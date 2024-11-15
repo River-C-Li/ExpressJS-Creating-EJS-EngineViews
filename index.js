@@ -7,7 +7,8 @@ app.use(express.static("./styles"));
 // require the filesystem module
 const fs = require("fs");
 // define the template engine
-app.engine("perscholas", (filePath, options, callback) => {
+// app.engine("perscholas", (filePath, options, callback) => {
+  app.engine("ejs", (filePath, options, callback) => {
   fs.readFile(filePath, (err, content) => {
     if (err) return callback(err);
 
@@ -23,25 +24,23 @@ app.engine("perscholas", (filePath, options, callback) => {
 });
 
 app.set("views", "./views"); // specify the views directory
-app.set("view engine", "perscholas"); // register the template engine
-// app.set('view engine', 'ejs'); // Set the view engine to EJS [2, 3, 5]
+// app.set("view engine", "perscholas"); // register the template engine
+app.set('view engine', 'ejs'); // Set the view engine to EJS [2, 3, 5]
 
 // // Route for the homepage
-// app.get('/', (req, res) => {
-//     res.render('home'); // Render the 'home.ejs' template [2, 3, 5]
-// });
 app.get("/", (req, res) => {
   const options = {
-    title: "<a href='./views/index.perscholas'>Offers</a>",
-    content: "also have Express integrations.",
+    title: "Offers",
+    content: "here is details.",
   };
-
-  res.render("index", options);
+res.render('home', options); // Render the 'home.ejs' template [2, 3, 5]
+  // res.render("index", options);
 });
+
 // // Route for the about page
-// app.get('/about', (req, res) => {
-//     res.render('about'); // Render the 'about.ejs' template [2, 3, 5]
-// });
+app.get('/about', (req, res) => {
+    res.render('about'); // Render the 'about.ejs' template [2, 3, 5]
+});
 
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}.`);
